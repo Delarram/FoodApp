@@ -15,7 +15,7 @@ class _ConstantScreenState extends State<ConstantScreen> {
   final screens = [
     Center(child: Text("hello Punam",style: GoogleFonts.lato(fontWeight: FontWeight.bold,fontSize: 20),)),
     const MyHomeScreen(),
-    Center(child: Text("i miss you",style: GoogleFonts.lato(fontWeight: FontWeight.bold,fontSize: 20),)),
+
     const MYBottomNavigation(),
     const MyLogin(),
 

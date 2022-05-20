@@ -83,7 +83,7 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                 children: [
                   Expanded(
                     child: Text(
-                      'Welcome from Food Burma',
+                      'Welcome from Food app',
                       style: GoogleFonts.roboto(
                           fontWeight: FontWeight.bold,
 
