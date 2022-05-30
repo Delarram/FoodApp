@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodapp/bottomnavigation/bottom_navigation.dart';
+
 import 'package:foodapp/screen/home_screen.dart';
 import 'package:foodapp/screen/login_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -14,8 +15,8 @@ class _ConstantScreenState extends State<ConstantScreen> {
   int index= 0;
   final screens = [
     Center(child: Text("hello Punam",style: GoogleFonts.lato(fontWeight: FontWeight.bold,fontSize: 20),)),
+    Center(child: Text("hello Punam",style: GoogleFonts.lato(fontWeight: FontWeight.bold,fontSize: 20),)),
     const MyHomeScreen(),
-
     const MYBottomNavigation(),
     const MyLogin(),
 

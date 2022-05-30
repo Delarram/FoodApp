@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodapp/detailScreen/detail_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 
@@ -152,36 +153,44 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                     separatorBuilder: (BuildContext context, int index) =>
                     const SizedBox(width: 12),
                     itemBuilder: (context, index) {
-                      return AspectRatio(
-                          aspectRatio: 0.8/1,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Expanded(
-                                child: Hero(
-                                  child: ClipRRect(
-                                    child: Image.asset(images[4-index],
-                                      fit: BoxFit.cover,
+                      return GestureDetector(
+                        onTap: (){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) =>  DetailScreen(images: images[4-index])),
+                          );
+                        },
+                        child: AspectRatio(
+                            aspectRatio: 0.8/1,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Expanded(
+                                  child: Hero(
+                                    child: ClipRRect(
+                                      child: Image.asset(images[4-index],
+                                        fit: BoxFit.cover,
+                                      ),
+                                      borderRadius: BorderRadius.circular(30),
                                     ),
-                                    borderRadius: BorderRadius.circular(30),
+                                    tag: images[4-index],
                                   ),
-                                  tag: images[4-index],
                                 ),
-                              ),
-                              const SizedBox(
-                                height: 8,
-                              ),
+                                const SizedBox(
+                                  height: 8,
+                                ),
 
-                              Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 16),
-                                child: Text("${foodsNames[4-index]} ",style: GoogleFonts.roboto(color: Colors.grey[800],fontSize: 16,fontWeight: FontWeight.bold),),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 15),
-                                child: Text("Recipes by Food Burma",style: GoogleFonts.roboto(color: Colors.grey[800],fontSize: 10,fontWeight: FontWeight.bold),),
-                              ),
-                            ],
-                          )
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                                  child: Text("${foodsNames[4-index]} ",style: GoogleFonts.roboto(color: Colors.grey[800],fontSize: 16,fontWeight: FontWeight.bold),),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                                  child: Text("Recipes by Food Burma",style: GoogleFonts.roboto(color: Colors.grey[800],fontSize: 10,fontWeight: FontWeight.bold),),
+                                ),
+                              ],
+                            )
+                        ),
                       );
                     },
                   )

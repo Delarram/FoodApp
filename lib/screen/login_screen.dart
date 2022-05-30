@@ -57,7 +57,8 @@ class _MyLoginState extends State<MyLogin> {
                           borderRadius: BorderRadius.all(
                             Radius.circular(13.0),
                           ),
-                          borderSide: BorderSide(width: 1)),
+                          borderSide: BorderSide(width: 1)
+                      ),
                       fillColor: Colors.black,
                       hintText: "Enter Mobile Number",
                       hintStyle: TextStyle(fontSize: 15, color: Colors.black12),
