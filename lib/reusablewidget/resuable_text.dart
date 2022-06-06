@@ -8,8 +8,6 @@ class CustomContainer extends StatelessWidget {
   final Color color;
 
 
-
-
    CustomContainer(
       {required this.text,
         required this.size,
@@ -20,7 +18,7 @@ class CustomContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 5),
+      padding: const EdgeInsets.symmetric(vertical: 5),
       height: 50,
       width: 80,
       decoration: BoxDecoration(
