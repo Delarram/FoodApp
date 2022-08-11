@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 
-class MyHomeScreen extends StatefulWidget {
-  const MyHomeScreen({Key? key}) : super(key: key);
+class MyHomeScreenTest extends StatefulWidget {
+  const MyHomeScreenTest({Key? key}) : super(key: key);
 
   @override
-  State<MyHomeScreen> createState() => _MyHomeScreenState();
+  State<MyHomeScreenTest> createState() => _MyHomeScreenTestState();
 }
 
-class _MyHomeScreenState extends State<MyHomeScreen> {
+class _MyHomeScreenTestState extends State<MyHomeScreenTest> {
   int index = 0;
   final screens = [
     const Center(child: Text("Hell0",style: TextStyle(fontSize: 32,fontWeight: FontWeight.bold),),),
@@ -55,7 +55,6 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
               NavigationDestination(
                   icon: Icon(Icons.account_circle_outlined),
                   label:'Profile' ),
-
             ],
           ),
         ),

@@ -8,7 +8,7 @@ class CustomContainer extends StatelessWidget {
   final Color color;
 
 
-   CustomContainer(
+   const CustomContainer(
       {required this.text,
         required this.size,
         required this.fontWeight,

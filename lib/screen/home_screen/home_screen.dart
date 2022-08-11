@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:foodapp/detailScreen/detail_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-
+import '../detailScreen/detail_screen.dart';
 
 class MyHomeScreen extends StatefulWidget {
   const MyHomeScreen({Key? key}) : super(key: key);
@@ -75,10 +73,8 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
       //   ),
       // ),
       body: SafeArea(
-        child: Container(
-          padding: const EdgeInsets.all(16),
-          width: double.infinity,
-          child: ListView(
+        child: SingleChildScrollView(
+          child: Column(
             children: [
               Row(
                 children: [
@@ -102,45 +98,45 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                   )
                 ],
               ),
-                const SizedBox(
-                  height: 20,
-                ),
-                SizedBox(
+              const SizedBox(
+                height: 20,
+              ),
+              SizedBox(
                   height: size.height * 0.25,
                   child: ListView.separated(
                     shrinkWrap: true,
                     scrollDirection: Axis.horizontal,
                     itemCount: 5,
                     separatorBuilder: (BuildContext context, int index) =>
-                        const SizedBox(width: 12),
+                    const SizedBox(width: 12),
                     itemBuilder: (context, index) {
                       return AspectRatio(
-                        aspectRatio: 0.8/1,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Expanded(
-                              child: ClipRRect(
-                                child: Image.asset(images[index],
-                                  fit: BoxFit.cover,
+                          aspectRatio: 0.8/1,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                child: ClipRRect(
+                                  child: Image.asset(images[index],
+                                    fit: BoxFit.cover,
+                                  ),
+                                  borderRadius: BorderRadius.circular(30),
                                 ),
-                                borderRadius: BorderRadius.circular(30),
                               ),
-                            ),
-                            const SizedBox(
-                              height: 5,
-                            ),
+                              const SizedBox(
+                                height: 5,
+                              ),
 
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 15),
-                              child: Text("${foodsNames[index]} Recipes",style: GoogleFonts.roboto(color: Colors.grey[800],fontSize: 10,fontWeight: FontWeight.bold),),
-                            )
-                          ],
-                        )
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 15),
+                                child: Text("${foodsNames[index]} Recipes",style: GoogleFonts.roboto(color: Colors.grey[800],fontSize: 10,fontWeight: FontWeight.bold),),
+                              )
+                            ],
+                          )
                       );
                     },
                   )
-                ),
+              ),
               const SizedBox(
                 height: 30,
               ),
@@ -195,7 +191,7 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                     },
                   )
               ),
-               ],
+            ],
           ),
         ),
       ),

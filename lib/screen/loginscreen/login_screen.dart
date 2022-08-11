@@ -96,7 +96,6 @@ class _MyLoginState extends State<MyLogin> {
                         Icons.password,
                         color: Colors.black,
                       ),
-
                       hintText: "Enter a password",
                       hintStyle: TextStyle(fontSize: 15, color: Colors.black12),
                     ),
@@ -157,7 +156,6 @@ class _MyLoginState extends State<MyLogin> {
                     onPressed: () {},
                   ),
                 ),
-
               ],
             ),
           ]
